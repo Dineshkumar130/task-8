@@ -1,0 +1,317 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #8c8c8c;
+}
+
+body {
+  margin: 0;
+  font-family: 'Alata', sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+/* Navbar links */
+.nav-link {
+  color: white;
+  font-family: 'Alata', sans-serif;
+}
+
+/* Fullscreen mobile menu */
+/* Mobile slide menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  z-index: 1040;
+
+  /* slide from right */
+  transform: translateX(100%);
+  transition: transform 0.35s ease-in-out;
+}
+
+/* When Bootstrap adds .show */
+.mobile-menu.show {
+  transform: translateX(0);
+}
+
+/* Menu text */
+.mobile-menu .nav-link {
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 32px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+    url("./images/desktop/image-hero.jpg") no-repeat center/cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  color: white;
+  border: 2px solid white;
+  padding: 30px;
+  max-width: 500px;
+  text-align: left;
+}
+
+h2 {
+  letter-spacing: 2px;
+  font-size: 42px;
+}
+
+p {
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Desktop overlap spacing */
+.about-card {
+  transform: translateY(40%);
+  right: 50px
+}
+
+
+/* =====================
+   ABOUT SECTION
+===================== */
+.about-section {
+  position: relative;
+  margin-top: 100px;
+}
+
+.about-box {
+  background: white;
+  padding: 60px;
+  position: absolute;
+  right: 40px;
+  bottom: 100px;
+  transform: translateY(50%);
+}
+
+/* =====================
+   CREATIONS
+===================== */
+.creations h2 {
+  text-align: left;
+}
+
+
+
+.creation-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.creation-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Dark gradient overlay */
+.creation-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Text on image */
+.creation-item span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+  z-index: 2;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.see-all {
+  position: relative;
+  left: 583px;
+  top: -48px;
+  border: 1px solid black;
+  padding: 8px 30px;
+  color: black;
+}
+
+.creations .row img {
+  width: 100%;
+}
+
+.creations .col-md-3 {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.creations .col-md-3::after {
+  content: "";
+  position: absolute;
+  inset: 0;  
+}
+
+.creations .col-md-3 span {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  z-index: 2;
+}
+
+/* =====================
+   FOOTER
+===================== */
+.footer-link {
+  color: #fff;
+  font-family: 'Alata', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.footer-social img {
+  width: 22px;
+}
+
+/* =====================
+   MOBILE VIEW
+===================== */
+@media (max-width: 768px) {
+
+  .navbar-collapse {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  /* Mobile menu */
+  .moblie-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: black;
+    padding: 40px;
+  }
+
+  .moblie-menu .nav-link {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+
+  .hero {
+    background:
+      linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)),
+      url("./images/mobile/image-hero.jpg") no-repeat center/cover;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+ .about-box {
+    position: static;        /* ← brings text back */
+    transform: none;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .about-box h2 {
+    font-size: 28px;
+  }
+
+  .about-box p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .see-all {
+    position: static;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+  }
+
+ /* =========================
+   MOBILE FOOTER (EXACT)
+========================= */
+
+.footer-mobile {
+  background-color: #000;
+  padding: 60px 0;
+}
+
+/* Logo */
+.footer-logo {
+  width: 150px;
+}
+
+/* Menu links */
+.footer-menu li {
+  margin: 14px 0;
+}
+
+.footer-menu a {
+  color: #fff;
+  font-family: 'Alata', sans-serif;
+  font-size: 15px;
+}
+
+.footer-menu a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+/* Social icons */
+.footer-social a {
+  margin: 0 10px;
+}
+
+.footer-social img {
+  width: 22px;
+}
+
+/* Copyright */
+.footer-copy {
+  color: #8c8c8c;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+}
