@@ -31,7 +31,7 @@ a {
   font-family: 'Alata', sans-serif;
 }
 
-/* Fullscreen mobile menu */
+
 /* Mobile slide menu */
 .mobile-menu {
   position: fixed;
@@ -93,13 +93,6 @@ p {
   line-height: 1.8;
 }
 
-/* Desktop overlap spacing */
-.about-card {
-  transform: translateY(40%);
-  right: 50px
-}
-
-
 /* =====================
    ABOUT SECTION
 ===================== */
@@ -123,7 +116,6 @@ p {
 .creations h2 {
   text-align: left;
 }
-
 
 
 .creation-item {
